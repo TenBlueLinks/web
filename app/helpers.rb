@@ -4,7 +4,8 @@ def require_helpers(helper_list)
   end
 end
 
-require_relative "../lib/search_tools"
+require "#{ENV["TENBLUELINKS_CORE_PATH"]}/lib/search_tools" 
+# For use with TenBlueLua tools
 
 helper_list = %w[html pagination]
 require_helpers(helper_list)
